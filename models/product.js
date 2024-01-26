@@ -83,30 +83,30 @@ productSchema.virtual("discountPercentage").get(function () {
     return Math.round(((this.originalPrice - this.currentPrice) / this.originalPrice) * 100);
 });
 
-productSchema.pre('save', function(next) {
-    this.productAdded = new Date();
-    next();
-});
-productSchema.post('save', function(document, next){
-    let data = `Product Saved at ${new Date()}. Product Name - ${document.productName} through DOCUMENT MIDDLEWARE`;
-    let filePath = path.join(__dirname,'./../logs/product.txt' )
-    fs.writeFileSync(filePath, data, { flag: 'a' }, (error) => {
-        let errorData = `Error Occurred at ${new Date()}. While Saving Product. Error is ${error}`;
-        fs.writeFileSync(filePath, errorData, { flag: 'a' });
-    });
-    next();
-});
+// productSchema.pre('save', function(next) {
+//     this.productAdded = new Date();
+//     next();
+// });
+// productSchema.post('save', function(document, next){
+//     let data = `Product Saved at ${new Date()}. Product Name - ${document.productName} through DOCUMENT MIDDLEWARE`;
+//     let filePath = path.join(__dirname,'./../logs/product.txt' )
+//     fs.writeFileSync(filePath, data, { flag: 'a' }, (error) => {
+//         let errorData = `Error Occurred at ${new Date()}. While Saving Product. Error is ${error}`;
+//         fs.writeFileSync(filePath, errorData, { flag: 'a' });
+//     });
+//     next();
+// });
 
-productSchema.post(/^find/, function(document, next){
-    this.endTime = Date.now();
-    let data = `\nProduct Fetched through QUERY MIDDLEWARE at ${new Date()} in ${ this.endTime - this.startTime  } Milliseconds`;
-    let filePath = path.join(__dirname,'./../logs/product.txt' )
-    fs.writeFileSync(filePath, data, { flag: 'a' }, (error) => {
-        let errorData = `Error Occured at ${new Date()}. While Saving Product. Error is ${error}`;
-        fs.writeFileSync(filePath, errorData, { flag: 'a' });
-    });
-    next();
-});
+// productSchema.post(/^find/, function(document, next){
+//     this.endTime = Date.now();
+//     let data = `\nProduct Fetched through QUERY MIDDLEWARE at ${new Date()} in ${ this.endTime - this.startTime  } Milliseconds`;
+//     let filePath = path.join(__dirname,'./../logs/product.txt' )
+//     fs.writeFileSync(filePath, data, { flag: 'a' }, (error) => {
+//         let errorData = `Error Occured at ${new Date()}. While Saving Product. Error is ${error}`;
+//         fs.writeFileSync(filePath, errorData, { flag: 'a' });
+//     });
+//     next();
+// });
 
 productSchema.pre('aggregate', function(next){
     this.pipeline().unshift( { $match: { Stock: {$gt: 0}}})
