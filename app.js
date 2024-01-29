@@ -30,7 +30,7 @@ var corsOptions = {
 app.use(cors(corsOptions));
 
 // app.use(limiter);
-app.use(express.json({ limit: "10kb" }));
+app.use(express.json());
 app.use(sanitize());
 app.use(xss());
 app.use(
