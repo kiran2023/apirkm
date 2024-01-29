@@ -15,7 +15,7 @@ const errorController = require("./controllers/errorController");
 
 const app = express();
 const limiter = rateLimit({
-  max: 10,
+  max: 100,
   windowMs: 60 * 60 * 1000,
   message: "Too Many Requests from this IP, Please Try Again in an Hour!",
 });
