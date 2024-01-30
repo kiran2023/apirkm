@@ -6,7 +6,7 @@ const helmet = require("helmet");
 const sanitize = require("express-mongo-sanitize");
 const xss = require("xss-clean");
 const hpp = require("hpp");
-// const rateLimit = require("express-rate-limit");
+const rateLimit = require("express-rate-limit");
 
 const productsRouter = require("./routes/productsRoutes");
 const authRouter = require("./routes/authRoutes");
@@ -14,11 +14,11 @@ const customError = require("./utils/customError");
 const errorController = require("./controllers/errorController");
 
 const app = express();
-// const limiter = rateLimit({
-//   max: 100,
-//   windowMs: 60 * 60 * 1000,
-//   message: "Too Many Requests from this IP, Please Try Again in an Hour!",
-// });
+const limiter = rateLimit({
+  max: 100,
+  windowMs: 60 * 60 * 1000,
+  message: "Too Many Requests from this IP, Please Try Again in an Hour!",
+});
 
 app.use(helmet());
 
