@@ -55,13 +55,14 @@ app.use(
   })
 );
 
+app.use("/", productsRouter);
+app.use("/api/v1", authRouter);
 app.use("/", express.static(path.join(__dirname, "./public/mainPage")));
 app.use(
   "/products",
   express.static(path.join(__dirname, "./public/products/"))
 );
-app.use("/api/v1/products", productsRouter);
-app.use("/api/v1", authRouter);
+
 
 app.all("*", (request, response, next) => {
   const error = new customError(
