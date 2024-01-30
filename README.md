@@ -3,9 +3,14 @@ A supermarket API with some advanced features for both the user and admin side.
 
 Technology Used - NodeJS, ExpressJS & MongoDB.
 
-1. Login/Registration 5. Various Product Filtration
-2. Authentication and Authorization 6. Perform CRUD operations on products
-3. Encryption and Decryption 7. Perform Fetch operation on users
-4. JWT token 8. Forgot and Reset Password
+👉 Login/Registration 
+👉 Authentication and Authorization 
+👉 Encryption and Decryption 
+👉 JWT token 
+👉 Various Product Filtration
+👉 Perform CRUD operations on products
+👉 Perform Fetch operation on users
+👉 Update User Details
+👉 Forgot/Reset Password, Update Password
 
 Visit - https://rkmapi-production.up.railway.app/
