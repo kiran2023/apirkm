@@ -18,15 +18,15 @@ Technology Used - NodeJS, ExpressJS & MongoDB.
 
 ##### Product Filtration
 View Products **Initial 30 Products Limit** 👉  https://rkmapi.azurewebsites.net
-Specific Product 👉 https://rkmapi.azurewebsites.net/**productID**
+Specific Product 👉 https://rkmapi.azurewebsites.net/productID
 
 ##### Filtration Various Stages 👉 Sort Products - Limit Products - Filter Based on RatingAverage, Category, discounts, stocks, product name, price, Ascending, Descending Order and more...
 Product Filter Various Stages **Multiple Filtration Endpoints Example** 👉 https://rkmapi.azurewebsites.net?category=beverages&ratingAverage=4&Stock[gt]=80&category=household&limit=50&sort=-currentPrice&sort=-title&sort=uniqueId&ratingAverage=3
 
-Sorting 👉 https://rkmapi.azurewebsites.net?sort=-currentPrice  **LowtoHigh price products**
-Limiting 👉 https://rkmapi.azurewebsites.net?limit=10  **Displays 10 products alone**
-Category 👉 https://rkmapi.azurewebsites.net/category/grocery 
-PriceFiltration 👉 https://rkmapi.azurewebsites.net/highToLow **LowToHigh - Current Price**
+Sorting 👉 https://rkmapi.azurewebsites.net?sort=-currentPrice  **LowtoHigh price products** <br>
+Limiting 👉 https://rkmapi.azurewebsites.net?limit=10  **Displays 10 products alone** <br>
+Category 👉 https://rkmapi.azurewebsites.net/category/grocery <br>
+PriceFiltration 👉 https://rkmapi.azurewebsites.net/highToLow **LowToHigh - Current Price** <br>
 
 ##### Login
 https://rkmapi.azurewebsites.net/api/v1/signup
@@ -35,9 +35,10 @@ https://rkmapi.azurewebsites.net/api/v1/signup
 https://rkmapi.azurewebsites.net/api/v1/login
 
 ##### Password Endpoints
-https://rkmapi.azurewebsites.net/api/v1/forgotPassword
-https://rkmapi.azurewebsites.net/api/v1/resetPassword/**WebToken**
-https://rkmapi.azurewebsites.net/api/v1/updatePassword **Current, newPassword, confirmPassword**
+https://rkmapi.azurewebsites.net/api/v1/forgotPassword <br>
+https://rkmapi.azurewebsites.net/api/v1/resetPassword/WebToken <br>
+https://rkmapi.azurewebsites.net/api/v1/updatePassword <br>
+##### Current, new Password, confirm password
 
 ##### Admin
 Admin performs Add, Update, delete products, and view registered users.
