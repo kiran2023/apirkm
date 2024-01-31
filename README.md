@@ -40,7 +40,7 @@ https://rkmapi.azurewebsites.net/api/v1/resetPassword/ **WebToken** <br>
 https://rkmapi.azurewebsites.net/api/v1/updatePassword <br>
 ##### Current, new Password, confirm password
 
-##### Admin
+### Admin
 Admin performs Add, Update, delete products, and view registered users.
 
 Visit - https://rkmapi.azurewebsites.net/
