@@ -14,4 +14,4 @@ Technology Used - NodeJS, ExpressJS & MongoDB.
   <li>👉 Forgot/Reset Password, Update Password</li>
 </ul>
 
-Visit - https://rkmapi-production.up.railway.app/
+Visit - https://rkmapi.azurewebsites.net/
