@@ -25,7 +25,8 @@ Product Filter Various Stages **Multiple Filtration Endpoints Example** 👉 htt
 
 Sorting 👉 https://rkmapi.azurewebsites.net?sort=-currentPrice  **LowtoHigh price products** <br>
 Limiting 👉 https://rkmapi.azurewebsites.net?limit=10  **Displays 10 products alone** <br>
-Category 👉 https://rkmapi.azurewebsites.net/category/grocery <br> **Specific category**
+Category 👉 https://rkmapi.azurewebsites.net/category/grocery **Specific category** <br>
+Greater/Lesser than 👉  https://rkmapi.azurewebsites.net?Stock[gt]=80 **Greater/Lesser than filtration** <br>
 PriceFiltration 👉 https://rkmapi.azurewebsites.net/highToLow **LowToHigh - Current Price** <br>
 
 ##### Login
